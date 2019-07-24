@@ -58,6 +58,7 @@
     <Compile Include="Book.cs">
       <DependentUpon>BookRegModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BookDB.cs" />
     <Compile Include="BookRegModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -108,7 +109,9 @@
     <None Include="BookRegModel.edmx.diagram">
       <DependentUpon>BookRegModel.edmx</DependentUpon>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
