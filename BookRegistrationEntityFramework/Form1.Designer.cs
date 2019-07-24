@@ -30,6 +30,7 @@
         {
             this.cboCustomers = new System.Windows.Forms.ComboBox();
             this.cboBooks = new System.Windows.Forms.ComboBox();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cboCustomers
@@ -37,7 +38,7 @@
             this.cboCustomers.FormattingEnabled = true;
             this.cboCustomers.Location = new System.Drawing.Point(67, 46);
             this.cboCustomers.Name = "cboCustomers";
-            this.cboCustomers.Size = new System.Drawing.Size(121, 21);
+            this.cboCustomers.Size = new System.Drawing.Size(165, 21);
             this.cboCustomers.TabIndex = 0;
             // 
             // cboBooks
@@ -45,14 +46,25 @@
             this.cboBooks.FormattingEnabled = true;
             this.cboBooks.Location = new System.Drawing.Point(67, 101);
             this.cboBooks.Name = "cboBooks";
-            this.cboBooks.Size = new System.Drawing.Size(121, 21);
+            this.cboBooks.Size = new System.Drawing.Size(165, 21);
             this.cboBooks.TabIndex = 1;
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Location = new System.Drawing.Point(67, 170);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(165, 61);
+            this.btnAddCustomer.TabIndex = 2;
+            this.btnAddCustomer.Text = "Add Customer";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cboBooks);
             this.Controls.Add(this.cboCustomers);
             this.Name = "Form1";
@@ -66,6 +78,7 @@
 
         private System.Windows.Forms.ComboBox cboCustomers;
         private System.Windows.Forms.ComboBox cboBooks;
+        private System.Windows.Forms.Button btnAddCustomer;
     }
 }
 
