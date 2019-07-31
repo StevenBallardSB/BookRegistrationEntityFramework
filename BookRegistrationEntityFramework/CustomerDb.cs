@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,6 +47,28 @@ namespace BookRegistrationEntityFramework
                 // Return newly added customer with CustomerID populated
 
                 return c;
+            }
+        }
+
+        public static Customer UpdateCustomer(Customer c)
+        {
+            using (var context = new BookRegistrationEntities())
+            {
+                context.Customer.Add(c);
+                // Tell EF we are updating an existing entity
+                context.Entry(c).State = EntityState.Modified;
+                context.SaveChanges();
+                return c;
+            }
+        }
+
+        public static void DeleteCustomer(Customer c)
+        {
+            using (var context = new BookRegistrationEntities())
+            {
+                context.Customer.Add(c);
+                context.Entry(c).State =EntityState.Deleted;
+                int rowsAffecteed = context.SaveChanges();
             }
         }
     }
